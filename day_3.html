@@ -10,6 +10,9 @@
     <p id="demo2"></p>
     <p id="demo3"></p>
     <button onclick="displayDate()">Date here</button>
+    
+    <p id="demo4">This is great</p>
+    <button onclick="uppercase()">Try it</button>
 
     <script>
         // function mulitiplication
@@ -30,6 +33,13 @@
         //display date
         function displayDate() {
             document.getElementById('demo3').innerHTML = Date();
+        }
+
+        // change to uppercase
+        
+        function uppercase()    {
+            let text = document.getElementById('demo4').innerHTML;
+            document.getElementById('demo4').innerHTML = text.toUpperCase();
         }
     </script>
 </body>
