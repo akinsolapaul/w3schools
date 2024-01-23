@@ -14,6 +14,9 @@
     <p id="demo4">This is great</p>
     <button onclick="uppercase()">Try it</button>
 
+
+    <p id="demo5"></p>
+
     <script>
         // function mulitiplication
         let x = myFunction(2, 3);
@@ -36,11 +39,15 @@
         }
 
         // change to uppercase
-        
         function uppercase()    {
             let text = document.getElementById('demo4').innerHTML;
             document.getElementById('demo4').innerHTML = text.toUpperCase();
         }
+
+        //the trim merthod
+        let text1 = "     Hellow World     "
+        let text2 = text1.trim();
+        document.getElementById('demo5').innerHTML = "Length text1 = " + text1.length + "<br>" + "Length text2 = " + text2.length;
     </script>
 </body>
 </html>
