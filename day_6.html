@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript Number Methods</h2>
+    <p>The toString() method converts a number to a string</p>
+    
+    <p id="demo"></p>
+
+
+
+
+    <h2>JavaScript Number Methods</h2>
+    <p>The toFixed() method rounds a number to a given number of digitd</p>
+    <p>For working with money, toFixed(2) is perfect.</p>
+
+    <p id="demo2"></p>
+
+    <script>
+        let x = 123;
+        document.getElementById("demo").innerHTML = 
+        x.toString() + "<br>" +
+        (123).toString() + "<br>" +
+        (100 +23).toString();
+
+        let y = 9.656;
+        document.getElementById("demo2").innerHTML =
+        y.toFixed(0) + "<br>" +
+        y.toFixed(2) + "<br>" +
+        y.toFixed(4) + "<br>" +
+        y.toFixed(6);
+    </script>
+</body>
+</html>
