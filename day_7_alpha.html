@@ -11,6 +11,14 @@
 
     <p id="demo"></p>
 
+
+
+    <!------>
+    <h2>The forEach Method</h2>
+
+    <p id="demo2"></p>
+
+
     <script>
         const fruits = ["Banana", "Orange", "Apple", "Mango"];
         //let fLen = fruits.length;
@@ -22,6 +30,20 @@
         text += "</ul>";
 
         document.getElementById("demo").innerHTML = text;
+
+
+
+
+        /////////////
+        let text2 = "<ul>";
+            fruits.forEach(myFunction);
+            text += "</ul>";
+
+            document.getElementById("demo2").innerHTML = text2;
+
+            function myFunction(value)  {
+                text2 += "<li>" + value + "</li>"
+            }
     </script>
 </body>
 </html>
