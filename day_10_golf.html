@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Javascript Arrays</h1>
+    <h2>Using Math.min() on an Array</h2>
+
+    <p>The lowest number is <span id="demo"></span> and the highest is <span id="demo2"></span></p>
+
+    <script>
+        const points = [40, 100, 1, 5, 25, 10];
+        document.getElementById("demo").innerHTML = myArrayMin(points);
+        document.getElementById("demo2").innerHTML = myArrayMax(points);
+
+        function myArrayMin(arr)    {
+            return Math.min.apply(null, arr);
+        }
+
+        function myArrayMax(arr)    {
+            return Math.max.apply(null, arr);
+        }
+    </script>
+</body>
+</html>
