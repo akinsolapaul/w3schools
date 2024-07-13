@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JavaScript Arrays</h1>
+    <h2>The reduce() Method</h2>
+
+    <p>Find the sum of all numbers in an array:</p>
+
+    <p id="demo"></p>
+
+    <br>
+    <br>
+    <br>
+    <h2>The reduce() method can accept an initial value:</h2>
+    <p id="demo2"></p>
+
+    <script>
+        const numbers = [45, 4, 9, 16, 25];
+        let sum = numbers.reduce(myFunction);
+
+        //for second function
+        let sum2 = numbers.reduce(myFunction2, 100);
+
+        document.getElementById("demo").innerHTML = "The sum is " + sum;
+
+        //for second function
+        document.getElementById("demo2").innerHTML = "The sum is " + sum2;
+
+        //function below does not use the index and array parameters. It can be rewritten to: 
+        //function myFunction(total, value) {           cc: second function
+        function myFunction(total, value, item, array) {
+            return total + value;
+        }
+
+        //second function
+        function myFunction2(total, value) {
+            return total + value;
+        }
+
+
+    </script>
+</body>
+
+</html>
