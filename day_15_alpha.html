@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>JavaScript Math.random()</h2>
+
+    <p>Every time you click the button, getRndInteger(min, max) returns a random number between 0 and 9 (both included):</p>
+
+
+
+    <button onclick="document.getElementById('demo').innerHTML = getRndInteger(2, 9)">Click me!</button>
+
+    <p id="demo"></p>
+
+    <script>
+        function getRndInteger(min, max)  {
+            //This JavaScript function always returns a random number between min (included) and max (excluded)
+            //to include both min and max; return Math.floor(Math.random() * (max - min + 1) ) + min;
+            return Math.floor(Math.random() * (max - min)) + 1;
+        }
+    </script>
+</body>
+
+</html>
