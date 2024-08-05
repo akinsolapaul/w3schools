@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>JavaScript Arrays</h1>
+    <h2>For In Loops</h2>
+    <p>The for in statement can loops over array values:</p>
+
+    <d id="demo"></d>
+</body>
+    <script>
+        const numbers = [45, 4, 9, 16, 25];
+
+        let text = "";
+
+        for (let x in numbers)  {
+            text += numbers[x] + "<br>";
+        }
+        document.getElementById("demo").innerHTML = text;
+    </script>
+</html>
