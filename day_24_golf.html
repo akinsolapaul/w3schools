@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Javascriot Sets</h1>
+    <h2>The entries() Method</h2>
+
+    <p>The entries() method returns an Iterator with [value,value] pairs from a Set:</p>
+
+    <p id="demo"></p>
+
+    <script>
+        //Create a Set
+        const letters = new Set(["a", "b", "c"]);
+
+        //Create an Iterator
+        const myIterator = letters.entries();
+
+        //list all elements
+        text = "";
+        for (let x of myIterator)   {
+            text += x + "<br>";
+        }
+
+        document.getElementById("demo").innerHTML = text;
+    </script>
+</body>
+</html>
