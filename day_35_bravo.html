@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Javascript Object</h1>
+    <h2>The defineProperty() Method</h2>
+
+    <p>This example changes a property value.</p>
+
+    <p id="demo"></p>
+
+    <script>
+        // Create an Object:
+        const person = {
+            firstName: "John",
+            lastNanem: "Doe",
+            language: "EN"
+        };
+
+        // Change a Propert
+        Object.defineProperty(person, "language", {value: "NO"})
+
+        // Display the Property
+        document.getElementById("demo").innerHTML = person.language;
+    </script>
+</body>
+</html>
