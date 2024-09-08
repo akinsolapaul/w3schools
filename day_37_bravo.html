@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Javascript Objects</h1>
+    <h2>The Object.preventExtensions() Method</h2>
+
+    <p id="demo"></p>
+    <br>
+    <h4>This checks if an object is extensible:</h3>
+    <p id="demo2"></p>
+
+    <script>
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        Object.preventExtensions(fruits);
+
+        //Test Error
+        let text = "";
+        try {
+            fruits.push("Kiwi");
+        }
+        catch (err)  {
+            text = err;
+        }
+
+        document.getElementById("demo").innerHTML = text;
+        
+
+        // To check if an object is extensible
+        let answer = Object.isExtensible(fruits);
+        document.getElementById("demo2").innerHTML = answer;
+    </script>
+</body>
+</html>

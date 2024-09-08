@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Objects</h1>
+    <h2>The Object.preventExtensions() Method</h2>
+
+    <p id="demo"></p>
+
+
+    <br>
+    <h4>This checks if an object is extensible:</h3>
+    <p id="demo2"></p>
+
+    <script>
+        "use strict"
+        // Create Object
+        const person = {firstName: "John", lastName: "Doe"};
+
+        // Prevent Extensions
+        Object.preventExtensions(person)
+
+        // Test Error
+        let text = "";
+        try  {
+            person.nationality = "English";
+        }
+        catch (err)  {
+            text = err;
+        }
+    
+        document.getElementById("demo").innerHTML = text;
+
+
+        // To check if an object is extensible
+        let answer = Object.isExtensible(person);
+        document.getElementById("demo2").innerHTML = answer;
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JavaScript Objects</h1>
+    <h2>The Object.freeze() Method</h2>
+
+    <p id="demo"></p>
+
+    <br>
+    <br>
+    <h4>The Object.isFrozen() method can be used to check if an object is frozen:</h4>
+    <p id="demo2"></p>
+
+    <script>
+        "use strict"
+        //  Create Object
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 50,
+            eyeColor: "blue"
+        };
+
+        // Freeze Object
+        Object.freeze(person)
+
+        //Test Error
+        let text;
+        try {
+            person.age = 51;
+            text = Object.values(person);
+        }
+        catch (err) {
+            text = err;
+        }
+
+        document.getElementById("demo").innerHTML = text;
+
+
+        //The Object.isFrozen() method can be used to check if an object is frozen.
+        let answer = Object.isFrozen(person);
+        document.getElementById("demo2").innerHTML = answer;
+    </script>
+</body>
+
+</html>
